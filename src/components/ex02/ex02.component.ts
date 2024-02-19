@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {JsonPipe, UpperCasePipe} from "@angular/common";
+import {UpperCasePipe} from "@angular/common";
 
 type Person = {
   name: string;
@@ -11,7 +11,6 @@ type Person = {
   selector: 'app-ex02',
   standalone: true,
   imports: [
-    JsonPipe,
     UpperCasePipe
   ],
   templateUrl: './ex02.component.html',

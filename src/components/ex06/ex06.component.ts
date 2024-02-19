@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import {Component} from '@angular/core';
 import {FormsModule} from "@angular/forms";
 
@@ -5,10 +6,11 @@ import {FormsModule} from "@angular/forms";
   selector: 'app-ex06',
   standalone: true,
   imports: [
-    FormsModule
+    FormsModule,
+    CommonModule
   ],
   templateUrl: './ex06.component.html',
- // styleUrl: './ex06.component.css'
+  styleUrl: './ex06.component.css'
 })
 export class Ex06Component {
   celcius: number = 0;
@@ -32,4 +34,13 @@ export class Ex06Component {
   converToFahrenheit() {
     this.fahrenheit = this.celcius * 9 / 5 + 32;
   }
+
+  validFahrenheit(){
+    return isNaN(this.fahrenheit)
+  }
+
+  validCelsius() {
+    return isNaN(this.celcius)
+  }
+
 }

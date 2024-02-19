@@ -6,8 +6,20 @@
   {{ n }}
 </p>
 
+<h2>Sorted Numbers</h2>
+
+<span *ngFor="let n of sortedNumbers()">
+    {{n}}
+</span>
+
+<br>
 <b>Fruits:</b>
 <p *ngFor="let f of fruits">
   {{ f }}
 </p>
+
+<span *ngFor="let f of sortedFruits()">
+  {{f | uppercase }}
+</span>
+
 
